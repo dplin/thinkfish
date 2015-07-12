@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="medium-9 large-8 columns">
+        <div class="row">
+            <div class="medium-12 large-12 columns">
+                <h4>{{ contactus.data["acf"]["title"] }}</h4>
+                <div ng-bind-html="contactus.data['acf']['description'] | unsafe"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="medium-8 large-8 columns">
+                <div ng-bind-html="contactus.data['acf']['shortcode'] | unsafe"></div>
+            </div>
+        </div>
+    </div>
+    <address>
+        <div class="medium-3 large-4 columns">
+            <div class="row">
+                <div class="medium-12 large-12 columns">
+                    <h6>Email</h6>
+                    <p>{{ contactus.data["acf"]["email"] }}</p>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="medium-12 large-12 columns">
+                    <h6>Phone</h6>
+                    <p>{{ contactus.data["acf"]["phone"] }}</p>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="medium-12 large-12 columns">
+                    <h6>Business Hours</h6>
+                    <div ng-bind-html="contactus.data['acf']['business_hours'] | unsafe"></div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </address>
+</div>
+

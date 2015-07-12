@@ -1,0 +1,76 @@
+$link-color: #008CBA;
+
+.top-bar {
+    margin: 20px;
+}
+.top-bar-container{
+    padding: 20px 0;
+}
+.top-bar-section>ul>.divider, .top-bar-section>ul>[role="separator"]{
+    padding: 7px;
+    border: none;
+    background-color: #FFFFFF;
+}
+.top-bar-section ul li{
+    background-color: #FFFFFF;
+}
+.top-bar-section .has-dropdown>a:after{
+    border-color: #555555 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+}
+.top-bar-section > ul > li:last-child {
+    width:111px;
+    border: 1px solid lighten($link-color, 53%);
+}
+.top-bar-section li:not(.has-form) a:not(.button):hover{
+    color: #333;
+    background: none;
+}
+.top-bar-section li:not(.has-form) a:not(.button) {
+    text-transform: uppercase;
+    font-weight: normal;
+}
+.top-bar-section ul li:hover:not(.has-form) > a, .top-bar-section li.active:not(.has-form) a:not(.button), .top-bar-section li.active:not(.has-form) a:not(.button):hover{
+    background:none !important;
+    color: #333 !important;
+}
+.top-bar-section li.active:not(.has-form) a:not(.button):before{
+    background:none !important;
+    content: "" !important;
+    position: absolute !important;
+    z-index: -1 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: #2098d1 !important;
+    height: 4px !important;
+    -webkit-transform: translateY(0) !important;
+    transform: translateY(0) !important;
+}
+/* // Add some whitespace between top bar and content
+.top-bar-container, .tab-bar {
+	margin-bottom: rem-calc(32);
+}
+
+.top-bar .name {
+	h1 a { font-weight: 500; }
+}
+
+// A more subtle background color for the active menu item
+.top-bar-section li.active:not(.has-form) a:not(.button)  {
+	background: #272727;
+}
+.top-bar-section li.active:not(.has-form) a:hover:not(.button) {
+	background: #202020;
+} */
+
+// Switch between the mobile menu (tab-bar) and desktop menu (topbar) based on a custom $topbar-breakpoint value.
+// The $topbar-breakpoint can be edited in _custom-settings.scss.
+
+@media only screen and (min-width: ($topbar-breakpoint + em-calc(1))) {
+  .tab-bar { display: none; }
+}
+
+// Hide the topbar when the screen size is smaller than the topbar breakpoint
+@media only screen and (max-width: $topbar-breakpoint) {
+  .top-bar { display: none; }
+}
