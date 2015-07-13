@@ -4,7 +4,6 @@ module.exports = function(grunt){
         concat: {
             lib:{
                 src: [
-                    'public/js/flexslider.js',
                     'public/js/foundation.js',
                     'public/js/main.js',
                     'public/js/angular.js',
@@ -15,16 +14,17 @@ module.exports = function(grunt){
             },
             js:{
                 src: [
-                    'app/thinkfish-app.js',
-                    'app/**/*.js'
+                    'public/core.js',
+                    'public/components/**/*.js',
+                    'public/services/*.js',
+                    'public/filters/*.js',
+                    'public/directives/*.js'
                 ],
                 dest: 'build/app.js',
             },
             css:{
                 src: [
-                    'public/css/foundation.css',
-                    'public/css/flexslider.css',
-                    'public/css/styles.css'
+                    'public/css/*.css'
                 ],
                 dest: 'build/styles.css',
             }
