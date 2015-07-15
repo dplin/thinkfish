@@ -1,18 +1,18 @@
-        <!--[if lt IE 10]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+    <!--[if lt IE 10]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 
-        <div class="preloader">
-            <div class="sc_ld1">
-                <span style="bottom:0;left:46%;position:absolute;font-size:4em;">THINK</span>
-            </div>
-            <div class="sc_ld2 text-center">
-                <span style="top:0;left:43%;position:absolute;font-size:4em;">DIFFERENT</span>
-            </div>
-            <div class="progress-bar" style="/*transform-origin:left center;*/position:absolute;top:50%;width:100%;height:1px;background-color:#333;z-index:2;box-sizing: border-box;outline: 0;-webkit-transform: scaleX(0);"></div>
-            <span class="progress-text" style="position:absolute;left:49.2%;top:49.2%;background-color:#FFFFFF;z-index:2;padding:0 7px;"></span>
-            <div class="bar" style="position:absolute;top:50%;width:100%; height:1px;/*background-color:#AAA;*/z-index:1;box-sizing: border-box;outline: 0;"></div>
+    <div class="preloader">
+        <div class="sc_ld1">
+            <span>THINK</span>
         </div>
+        <div class="sc_ld2 text-center">
+            <span>DIFFERENT</span>
+        </div>
+        <div class="progress-bar"></div>
+        <span class="progress-text"></span>
+        <div class="bar"></div>
+    </div>
 
     <nav class="navigation">
         <ul>
@@ -31,22 +31,22 @@
 
     <main>
         <section class="splash">
-            <div style="background-image: url('/img/bg2.jpg');"></div>
-             <div>
+            <div class="splash_bg"></div>
+            <div>
                 <h1 class="sc_op1">
-                    <span style="color:#999;">#THINK</span><span>DIFFERENT</span>
+                    <span>#THINK</span><span>DIFFERENT</span>
                 </h1>
                 <p class="sc_op2">Design &amp; Develop</p>
             </div>
-            <div class="open_curtain" style="z-index:20;">
-                <button class="sc_op3" style="background:none;outline: 0;margin:0;"><span style="font-size:0.8em;display:block;line-height:2;">Starts here</span><span class="lnr lnr-arrow-down"></span></button>
+            <div class="open_curtain">
+                <button class="sc_op3"><span>Starts here</span><span class="lnr lnr-arrow-down"></span></button>
             </div>
-                <canvas id="canvas" style="z-index:10;"></canvas>
+            <canvas id="canvas"></canvas>
         </section>
         <section class="services">
             <div class="row">
                 <div class="small-12 columns text-center">
-                    <header style="margin-bottom:30px;">
+                    <header>
                         <h1>Services</h1>
                         <hr>
                         <p>We code and design</p>
@@ -55,24 +55,23 @@
             </div>
             <div class="row">
                 <div class="small-4 columns text-center">
-                    <span class="lnr lnr-coffee-cup" style="color:#FF7373;font-size:6.5em;"></span><br>
-                    <!-- <svg class="lnr" style="fill:#FF7373;width:6.5em;height:6.5em;"><use xlink:href="#lnr-coffee-cup"></use></svg><br /> -->
+                    <span class="lnr lnr-coffee-cup"></span><br>
                     <h4>Research</h4>
                     <p>Understanding the needs of each individual client and business is vital in deliverying the perfect user experience.</p>
                 </div>
                 <div class="small-4 columns text-center">
-                    <span class="lnr lnr-tablet" style="color:#FF7373;font-size:6.5em;"></span><br>
+                    <span class="lnr lnr-tablet"></span><br>
                     <h4>Web/UI Design</h4>
                     <p>I design beautiful web/mobile interfaces that are visually engaging and simple to use.</p>
                 </div>
                 <div class="small-4 columns text-center">
-                    <span class="lnr lnr-rocket" style="color:#FF7373;font-size:6.5em;"></span><br>
+                    <span class="lnr lnr-rocket"></span><br>
                     <h4>HTML/CSS</h4>
                     <p>Using HTML5, CSS3, jQuery and RWD I build each project to meet the needs of the client.</p>
                 </div>
             </div>
         </section>
-        <section class="work" style="background-color:#f7f7f7;">
+        <section class="work">
             <div class="row">
                 <div class="small-12 columns text-center">
                     <header>
@@ -83,11 +82,9 @@
                 </div>
             </div>
             <div class="row fullWidth">
-                <div class="small-6 columns" style="padding:0;">
-                    <div class="tpl" style="background-color:#ffc3a0;position:absolute;">
-
-                    </div>
-                    <figure class="effect-hera" style="width:100%;height: 100%;visibility:hidden;">
+                <div class="small-6 columns">
+                    <div class="tpl"></div>
+                    <figure class="effect-hera">
                         <img src="/img/sc_lamoore.png" alt="">
                         <figcaption>
                             <p>
@@ -96,11 +93,9 @@
                         </figcaption>
                     </figure>
                 </div>
-                <div class="small-6 columns" style="padding:0;">
-                    <div class="tpr" style="background-color:#333333;position:absolute;">
-
-                    </div>
-                    <figure class="effect-hera" style="width:100%;height: 100%;visibility:hidden;">
+                <div class="small-6 columns">
+                    <div class="tpr"></div>
+                    <figure class="effect-hera">
                         <img src="/img/sc_doccomp.png" alt="">
                         <figcaption>
                             <p>
@@ -112,11 +107,9 @@
             </div>
 
             <div class="row fullWidth">
-                <div class="small-6 columns" style="padding:0;">
-                    <div class="btl" style="background-color:#a366a3;position:absolute;">
-
-                    </div>
-                    <figure class="effect-hera" style="width:100%;height: 100%;visibility:hidden;">
+                <div class="small-6 columns">
+                    <div class="btl"></div>
+                    <figure class="effect-hera">
                         <img src="/img/sc_white-orchid.png" alt="">
                         <figcaption>
                             <p>
@@ -125,11 +118,9 @@
                         </figcaption>
                     </figure>
                 </div>
-                <div class="small-6 columns" style="padding:0;">
-                    <div class='btr' style="background-color:#ff7373;position:absolute;">
-
-                    </div>
-                    <figure class="effect-hera" style="width:100%;height: 100%;visibility:hidden;">
+                <div class="small-6 columns">
+                    <div class="btr"></div>
+                    <figure class="effect-hera">
                         <img src="/img/sc_amorebrewing.png" alt="">
                         <figcaption>
                             <p>
@@ -140,7 +131,7 @@
                 </div>
             </div>
         </section>
-        <section class="about" style="background-color:#ffffff;">
+        <section class="about">
             <div class="row">
                 <div class="small-12 columns text-center">
                     <header>
@@ -151,15 +142,15 @@
                 </div>
             </div>
         </section>
-        <section class="contact" style="background-color:#f7f7f7;">
+        <section class="contact">
             <div class="row">
                 <div class="small-12 columns text-center">
-                    <i class="fa fa-paper-plane-o" style="font-size:3em;margin-bottom:25px;display:block;"></i>
+                    <i class="fa fa-paper-plane-o"></i>
                     <a href="mailto:derek.pc.lin@gmail.com">derek.pc.lin@gmail.com</a>
                 </div>
             </div>
         </section>
-        <section class="followme" style="background-color:#ffffff;">
+        <section class="followme">
             <div class="row">
                 <div class="small-12 columns text-center">
                     <i class="fa fa-facebook-official"></i><i class="fa fa-twitter"></i><i class="fa fa-dribbble"></i><i class="fa fa-linkedin-square"></i>
@@ -323,11 +314,9 @@
                     // Set animation
                     openingTimeline.to(sc_op1, 0.5, {yPercent: 0, autoAlpha: 1}, "text")
                         .to(sc_op2, 0.5, {yPercent: 0, autoAlpha: 1}, "text")
-                        .to(sc_op3, 0.3, {y:0, autoAlpha: 0.7, onComplete: function(sc_op3){ /*$('.sc_op3').addClass("animated bounceIn");*/ }})
+                        .to(sc_op3, 0.3, {y:0, autoAlpha: 0.7})
                         .to(sc_op4, 0.3, {x:0, autoAlpha: 1});
                 }
-
-
 
                 /*************************************************************** Main Page Animation With ScrollMagic ****************************************************************/
 
@@ -358,9 +347,9 @@
 
                 // Navigation Menu Color Change Animation
                 var nav_elements = 'nav + button > *';
-                var tw_nav1 = TweenMax.to(nav_elements, 0.3, {color:'#555555'});  // Light to Dark
-                var tw_nav2 = TweenMax.to(nav_elements, 0.3, {color:'#FFFFFF'});  // Dark to Light
-                var tw_nav3 = TweenMax.to(nav_elements, 0.3, {color:'#555555'});  // Light to Dark
+                var tw_nav1 = TweenMax.to(nav_elements, 0.3, {color:'#555555'});    // Light to Dark
+                var tw_nav2 = TweenMax.to(nav_elements, 0.3, {color:'#FFFFFF'});   // Dark to Light
+                var tw_nav3 = TweenMax.to(nav_elements, 0.3, {color:'#555555'});    // Light to Dark
 
                 var sc_nav1 = new ScrollMagic.Scene({triggerElement: '.services', triggerHook: 'onLeave', offset: -40})
                     .setTween(tw_nav1);
