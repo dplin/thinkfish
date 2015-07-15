@@ -4,11 +4,11 @@ module.exports = function(grunt){
         concat: {
             lib:{
                 src: [
-                    'public/js/foundation.js',
-                    'public/js/main.js',
                     'public/js/angular.js',
                     'public/js/router.es5.js',
-                    'public/js/angular-animate.js'
+                    'public/js/angular-animate.js',
+                    'public/js/animation.gsap.js',
+                    'public/js/main.js'
                 ],
                 dest: 'build/lib.js',
             },
@@ -56,7 +56,7 @@ module.exports = function(grunt){
         compass: {
             scss:{
                 options:{
-                    sassDir: 'scss',
+                    sassDir: 'public/scss',
                     cssDir: 'public/css',
                     outputStyle: 'compressed',
                     cacheDir: '/temp/sass-cache'
@@ -66,17 +66,14 @@ module.exports = function(grunt){
         watch: {
             compass:{
                 options: { livereload: true },
-                files: ['scss/**/*.{scss,sass}'],
+                files: ['public/scss/**/*.{scss,sass}'],
                 tasks: ['compass']
-            },
-            js:{
-                files: ['app/**/*.js'],
-                tasks: ['concat:js', 'uglify:js']
-            },
-            lib:{
-                files: ['public/js/**/*.js'],
-                tasks: ['concat:lib', 'uglify:lib']
             }
+//            ,
+//            js:{
+//                files: ['public/**/*.js', 'public/*.js'],
+//                tasks: ['concat:js', 'uglify:js']
+//            }
         }
     });
 

@@ -18,6 +18,16 @@ $white: #FFFFFF;
     //overflow: -moz-scrollbars-none;
     //overflow: hidden;
 }
+.sc_ld1{
+    height:50%;
+    background-color:#fff;
+    position:relative;
+}
+.sc_ld2{
+    height:50%;
+    background-color:#fff;
+    position:relative;
+}
 .sc_ld1 > span, .sc_ld2 > span{
     opacity: 0;
 }
@@ -48,11 +58,6 @@ hr {
 main{
     height: 100%;
     width: 100%;
-/* position: relative;
-  top: 0;
-  bottom: 100%;
-  left: 0;
-  z-index: 1; */
     flex:1;
     transform: translate3d(0,0,0);
     transition: transform .3s;
@@ -135,6 +140,14 @@ nav + button.active > *{
   }
 }
 
+.preloader{
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:200;
+}
 
 /* SVG Icons */
 /* .lnr {
@@ -166,25 +179,13 @@ section:not(:first-child){
 section.splash{
     height: 100vh;
     overflow: hidden;
-    /* background-image: url('../assets/img/bg2.jpg');
-    background-size: cover; */
     position: relative;
-
 
     > div:first-child{
         height:140%;
         position:relative;
         top: -100%;
         background-size: cover !important;
-
-        // hmmm....
-        //left:46%;
-
-
-        //background-repeat:no-repeat;
-/*     height:200%;position:relative;top:-100%;
-
-    background-position:0% 0%; */
     }
     > div:nth-child(2){
         position: absolute;
