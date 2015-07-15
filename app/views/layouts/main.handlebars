@@ -4,18 +4,20 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title ng-bind="$root.title"></title>
-        <meta name="description" content="">
+        <meta name="description" content="{{ description }}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-
-        <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+        <link rel="stylesheet" href="//cdn.linearicons.com/free/1.0.0/icon-font.min.css">
         <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway">
         <link rel="stylesheet" href="/css/foundation.css">
         <link rel="stylesheet" href="/css/styles.css">
 
     </head>
-    <body style="position:relative;height:100%;width:100%;">
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
 
         {{{ body }}}
 
@@ -28,8 +30,6 @@
         <script src="./js/router.es5.js"></script>
         <script src="./core.js"></script>
         <script src="./components/home/home.js"></script>
-        <script src="./components/work/work.js"></script>
-        <script src="./components/contact/contact.js"></script>
         <script src="./services/core-service.js"></script>
         <script src="./filters/core-filters.js"></script>
         <script src="./directives/core-directives.js"></script>

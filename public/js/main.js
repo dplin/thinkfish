@@ -1,5 +1,5 @@
 // executes as soon as DOM is ready
-$(function(){
+//$(function(){
 
 
 
@@ -44,7 +44,7 @@ $(function(){
     });*/
 
 
-});
+//});
 
 // executes when complete page is fully loaded, including all frames, objects and images
 $(window).load(function() {

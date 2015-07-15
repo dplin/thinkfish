@@ -5,8 +5,6 @@
                "ngNewRouter",
                "ngAnimate",
                "core.home",
-               "core.work",
-               "core.contact",
                "core.filters",
                "core.directives",
                "core.services"
@@ -19,9 +17,7 @@
 
                 $router.config([
                     {path:"/", redirectTo: "home"},
-                    {path:"/home", component: "home", as: "home"},
-                    {path:"/work", component: "work", as: "work"},
-                    {path:"/contact", component: "contact", as: "contact"}
+                    {path:"/home", component: "home", as: "home"}
                 ]);
 
                 $rootScope.site_name = 'Think Different';
