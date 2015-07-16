@@ -5,11 +5,14 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
 
 var routes = require('./app/routes/index');
 //var users = require('./app/routes/users');
 
 var app = express();
+
+mongoose.connect('mongodb://thinkfish:thinkfish@ds049848.mongolab.com:49848/thinkfish');
 
 // Needed for Nodemon
 var port = Number(process.env.PORT || 3000);

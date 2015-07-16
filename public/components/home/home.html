@@ -1,166 +1,139 @@
-    <div class="preloader">
-        <div class="sc_ld1">
-            <span>THINK</span>
+<main>
+    <section class="splash">
+        <div class="splash_bg"></div>
+        <div>
+            <h1 class="sc_op1">
+                <span>#THINK</span><span>DIFFERENT</span>
+            </h1>
+            <p class="sc_op2">Design &amp; Develop</p>
         </div>
-        <div class="sc_ld2 text-center">
-            <span>DIFFERENT</span>
+        <div class="open_curtain">
+            <button class="sc_op3"><span>Starts here</span><span class="lnr lnr-arrow-down"></span></button>
         </div>
-        <div class="progress-bar"></div>
-        <span class="progress-text"></span>
-        <div class="bar"></div>
-    </div>
+        <canvas id="canvas"></canvas>
+    </section>
+    <section class="services">
+        <div class="row">
+            <div class="small-12 columns text-center">
+                <header>
+                    <h1>Services</h1>
+                    <hr>
+                    <p>We code and design</p>
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-4 columns text-center">
+                <span class="lnr lnr-coffee-cup"></span><br>
+                <h4>Research</h4>
+                <p>Understanding the needs of each individual client and business is vital in deliverying the perfect user experience.</p>
+            </div>
+            <div class="small-4 columns text-center">
+                <span class="lnr lnr-tablet"></span><br>
+                <h4>Web/UI Design</h4>
+                <p>I design beautiful web/mobile interfaces that are visually engaging and simple to use.</p>
+            </div>
+            <div class="small-4 columns text-center">
+                <span class="lnr lnr-rocket"></span><br>
+                <h4>HTML/CSS</h4>
+                <p>Using HTML5, CSS3, jQuery and RWD I build each project to meet the needs of the client.</p>
+            </div>
+        </div>
+    </section>
+    <section class="work">
+        <div class="row">
+            <div class="small-12 columns text-center">
+                <header>
+                    <h1>Work</h1>
+                    <hr>
+                    <p>here are some of my recent works</p>
+                </header>
+            </div>
+        </div>
+        <div class="row fullWidth">
+            <div class="small-6 columns">
+                <div class="tpl"></div>
+                <figure class="effect-hera">
+                    <img src="/img/sc_lamoore.png" alt="">
+                    <figcaption>
+                        <p>
+                            <a href="#"><span>v</span><span>i</span><span>e</span><span>w</span></a>
+                        </p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="small-6 columns">
+                <div class="tpr"></div>
+                <figure class="effect-hera">
+                    <img src="/img/sc_doccomp.png" alt="">
+                    <figcaption>
+                        <p>
+                            <a href="#"><span>v</span><span>i</span><span>e</span><span>w</span></a>
+                        </p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
 
-    <nav class="navigation">
-        <ul>
-            <li class="nav-item"><button data-target="splash">Home</button></li>
-            <li class="nav-item"><button data-target="services">Services</button></li>
-            <li class="nav-item"><button data-target="work">Work</button></li>
-            <li class="nav-item"><button data-target="about">About Me</button></li>
-            <li class="nav-item"><button data-target="contact">Contact</button></li>
-        </ul>
-    </nav>
+        <div class="row fullWidth">
+            <div class="small-6 columns">
+                <div class="btl"></div>
+                <figure class="effect-hera">
+                    <img src="/img/sc_white-orchid.png" alt="">
+                    <figcaption>
+                        <p>
+                            <a href="#"><span>v</span><span>i</span><span>e</span><span>w</span></a>
+                        </p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="small-6 columns">
+                <div class="btr"></div>
+                <figure class="effect-hera">
+                    <img src="/img/sc_amorebrewing.png" alt="">
+                    <figcaption>
+                        <p>
+                            <a href="#"><span>v</span><span>i</span><span>e</span><span>w</span></a>
+                        </p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+    <section class="about">
+        <div class="row">
+            <div class="small-12 columns text-center">
+                <header>
+                    <h1>About</h1>
+                    <hr>
+                    <p>Hello, my name is Derek.  I'm a passionate web developer based in Toronto, Canada.  I love making beautiful, responsive and user-friendly web site with a preference towards clean, simple, minimalistic design.</p>
+                </header>
+            </div>
+        </div>
+    </section>
+    <section class="contact">
+        <div class="row">
+            <div class="small-12 columns text-center">
+                <i class="fa fa-paper-plane-o"></i>
+                <a href="mailto:derek.pc.lin@gmail.com">derek.pc.lin@gmail.com</a>
+            </div>
+        </div>
+    </section>
+    <section class="followme">
+        <div class="row">
+            <div class="small-12 columns text-center">
+                <i class="fa fa-facebook-official"></i><i class="fa fa-twitter"></i><i class="fa fa-dribbble"></i><i class="fa fa-linkedin-square"></i>
+            </div>
+        </div>
+    </section>
+</main>
 
-    <button>
-        <span class="lnr lnr-menu"></span>
-        <p>Menu</p>
-    </button>
+<script>
+    // Load Scrolling Code
+    $.getScript('./js/scroll.js');
 
-    <main>
-        <section class="splash">
-            <div class="splash_bg"></div>
-            <div>
-                <h1 class="sc_op1">
-                    <span>#THINK</span><span>DIFFERENT</span>
-                </h1>
-                <p class="sc_op2">Design &amp; Develop</p>
-            </div>
-            <div class="open_curtain">
-                <button class="sc_op3"><span>Starts here</span><span class="lnr lnr-arrow-down"></span></button>
-            </div>
-            <canvas id="canvas"></canvas>
-        </section>
-        <section class="services">
-            <div class="row">
-                <div class="small-12 columns text-center">
-                    <header>
-                        <h1>Services</h1>
-                        <hr>
-                        <p>We code and design</p>
-                    </header>
-                </div>
-            </div>
-            <div class="row">
-                <div class="small-4 columns text-center">
-                    <span class="lnr lnr-coffee-cup"></span><br>
-                    <h4>Research</h4>
-                    <p>Understanding the needs of each individual client and business is vital in deliverying the perfect user experience.</p>
-                </div>
-                <div class="small-4 columns text-center">
-                    <span class="lnr lnr-tablet"></span><br>
-                    <h4>Web/UI Design</h4>
-                    <p>I design beautiful web/mobile interfaces that are visually engaging and simple to use.</p>
-                </div>
-                <div class="small-4 columns text-center">
-                    <span class="lnr lnr-rocket"></span><br>
-                    <h4>HTML/CSS</h4>
-                    <p>Using HTML5, CSS3, jQuery and RWD I build each project to meet the needs of the client.</p>
-                </div>
-            </div>
-        </section>
-        <section class="work">
-            <div class="row">
-                <div class="small-12 columns text-center">
-                    <header>
-                        <h1>Work</h1>
-                        <hr>
-                        <p>here are some of my recent works</p>
-                    </header>
-                </div>
-            </div>
-            <div class="row fullWidth">
-                <div class="small-6 columns">
-                    <div class="tpl"></div>
-                    <figure class="effect-hera">
-                        <img src="/img/sc_lamoore.png" alt="">
-                        <figcaption>
-                            <p>
-                                <a href="#"><span>v</span><span>i</span><span>e</span><span>w</span></a>
-                            </p>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="small-6 columns">
-                    <div class="tpr"></div>
-                    <figure class="effect-hera">
-                        <img src="/img/sc_doccomp.png" alt="">
-                        <figcaption>
-                            <p>
-                                <a href="#"><span>v</span><span>i</span><span>e</span><span>w</span></a>
-                            </p>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-
-            <div class="row fullWidth">
-                <div class="small-6 columns">
-                    <div class="btl"></div>
-                    <figure class="effect-hera">
-                        <img src="/img/sc_white-orchid.png" alt="">
-                        <figcaption>
-                            <p>
-                                <a href="#"><span>v</span><span>i</span><span>e</span><span>w</span></a>
-                            </p>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="small-6 columns">
-                    <div class="btr"></div>
-                    <figure class="effect-hera">
-                        <img src="/img/sc_amorebrewing.png" alt="">
-                        <figcaption>
-                            <p>
-                                <a href="#"><span>v</span><span>i</span><span>e</span><span>w</span></a>
-                            </p>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-        </section>
-        <section class="about">
-            <div class="row">
-                <div class="small-12 columns text-center">
-                    <header>
-                        <h1>About</h1>
-                        <hr>
-                        <p>Hello, my name is Derek.  I'm a passionate web developer based in Toronto, Canada.  I love making beautiful, responsive and user-friendly web site with a preference towards clean, simple, minimalistic design.</p>
-                    </header>
-                </div>
-            </div>
-        </section>
-        <section class="contact">
-            <div class="row">
-                <div class="small-12 columns text-center">
-                    <i class="fa fa-paper-plane-o"></i>
-                    <a href="mailto:derek.pc.lin@gmail.com">derek.pc.lin@gmail.com</a>
-                </div>
-            </div>
-        </section>
-        <section class="followme">
-            <div class="row">
-                <div class="small-12 columns text-center">
-                    <i class="fa fa-facebook-official"></i><i class="fa fa-twitter"></i><i class="fa fa-dribbble"></i><i class="fa fa-linkedin-square"></i>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <script>
-        // Load Scrolling Code
-        $.getScript('./js/scroll.js');
-
-        // Load Particle Animation Script
-        $.getScript('./js/particles.js');
-    </script>
+    // Load Particle Animation Script
+    $.getScript('./js/particles.js');
+</script>
 
 
