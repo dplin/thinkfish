@@ -4,6 +4,7 @@
             angular.module("core", [
                "ngNewRouter",
                "ngAnimate",
+               "ngResource",
                "core.home",
                "core.filters",
                "core.directives",

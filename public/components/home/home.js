@@ -1,10 +1,16 @@
 (function(){
     'use strict';
 
-    function HomeController($rootScope) {
+    function HomeController($rootScope, $resource) {
+        var Work = $resource('/api/works');
         var vm = this;
         $rootScope.page = 'pageHome';
         $rootScope.title = $rootScope.site_name + ' | Home';
+
+
+        Work.query(function (res){
+            console.log(res);
+        });
 
         // Component Lifecycle Hooks
         // Note: This is where you load everything before component is rendered into viewport.
@@ -22,7 +28,7 @@
 
     angular
         .module('core.home', [])
-        .controller('HomeController', ['$rootScope', HomeController]);
+        .controller('HomeController', ['$rootScope', '$resource', HomeController]);
 
 }());
 
