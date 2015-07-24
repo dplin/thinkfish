@@ -54,10 +54,10 @@
             <div class="small-6 columns">
                 <div class="tpl"></div>
                 <figure class="effect-hera">
-                    <img src="/img/sc_lamoore.png" alt="">
+                    <img src="{{ home.works[0]['image_url'] }}" alt="">
                     <figcaption>
                         <p>
-                            <a href="#"><span>v</span><span>i</span><span>e</span><span>w</span></a>
+                            <a href="{{ home.works[0]['work_url'] }}" target="_blank"><span>v</span><span>i</span><span>e</span><span>w</span></a>
                         </p>
                     </figcaption>
                 </figure>
@@ -65,10 +65,10 @@
             <div class="small-6 columns">
                 <div class="tpr"></div>
                 <figure class="effect-hera">
-                    <img src="/img/sc_doccomp.png" alt="">
+                    <img src="{{ home.works[1]['image_url'] }}" alt="">
                     <figcaption>
                         <p>
-                            <a href="#"><span>v</span><span>i</span><span>e</span><span>w</span></a>
+                            <a href="{{ home.works[1]['work_url'] }}" target="_blank"><span>v</span><span>i</span><span>e</span><span>w</span></a>
                         </p>
                     </figcaption>
                 </figure>
@@ -79,10 +79,10 @@
             <div class="small-6 columns">
                 <div class="btl"></div>
                 <figure class="effect-hera">
-                    <img src="/img/sc_white-orchid.png" alt="">
+                    <img src="{{ home.works[2]['image_url'] }}" alt="">
                     <figcaption>
                         <p>
-                            <a href="#"><span>v</span><span>i</span><span>e</span><span>w</span></a>
+                            <a href="{{ home.works[2]['work_url'] }}" target="_blank"><span>v</span><span>i</span><span>e</span><span>w</span></a>
                         </p>
                     </figcaption>
                 </figure>
@@ -90,10 +90,10 @@
             <div class="small-6 columns">
                 <div class="btr"></div>
                 <figure class="effect-hera">
-                    <img src="/img/sc_amorebrewing.png" alt="">
+                    <img src="{{ home.works[3]['image_url'] }}" alt="">
                     <figcaption>
                         <p>
-                            <a href="#"><span>v</span><span>i</span><span>e</span><span>w</span></a>
+                            <a href="{{ home.works[3]['work_url'] }}" target="_blank"><span>v</span><span>i</span><span>e</span><span>w</span></a>
                         </p>
                     </figcaption>
                 </figure>
@@ -106,7 +106,7 @@
                 <header>
                     <h1>About</h1>
                     <hr>
-                    <p>Hello, my name is Derek.  I'm a passionate web developer based in Toronto, Canada.  I love making beautiful, responsive and user-friendly web site with a preference towards clean, simple, minimalistic design.</p>
+                    <p>{{ home.about[0]['description'] }}</p>
                 </header>
             </div>
         </div>
@@ -122,7 +122,10 @@
     <section class="followme">
         <div class="row">
             <div class="small-12 columns text-center">
-                <i class="fa fa-facebook-official"></i><i class="fa fa-twitter"></i><i class="fa fa-dribbble"></i><i class="fa fa-linkedin-square"></i>
+                <a href="{{ home.contact[0]['url'] }}" target="_blank"><i class="fa fa-facebook-official"></i></a>
+                <a href="{{ home.contact[1]['url'] }}" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="{{ home.contact[2]['url'] }}" target="_blank"><i class="fa fa-dribbble"></i></a>
+                <a href="{{ home.contact[3]['url'] }}" target="_blank"><i class="fa fa-linkedin-square"></i></a>
             </div>
         </div>
     </section>

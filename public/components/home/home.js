@@ -3,6 +3,8 @@
 
     function HomeController($rootScope, $resource) {
         var Work = $resource('/api/works');
+        var About = $resource('/api/about');
+        var Contact = $resource('/api/contact');
         var vm = this;
         $rootScope.page = 'pageHome';
         $rootScope.title = $rootScope.site_name + ' | Home';
@@ -19,7 +21,13 @@
             //pageService.loadPageData('about');
             //vm.data = pageService.pagedata;
             Work.query(function (res){
-                console.log(res);
+                vm.works = res;
+            });
+            About.query(function (res){
+                vm.about = res;
+            });
+            Contact.query(function (res){
+                vm.contact = res;
             });
         };
     }
