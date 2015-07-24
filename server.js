@@ -12,12 +12,12 @@ var routes = require('./app/routes/index');
 
 var app = express();
 
+// MongoDB connection
 mongoose.connect('mongodb://thinkfish:thinkfish@ds049848.mongolab.com:49848/thinkfish');
 
 // Needed for Nodemon
 var port = Number(process.env.PORT || 3000);
 app.listen(port);
-
 
 // view engine setup
 app.engine('handlebars', exphbs({layoutsDir: "app/views/layouts/", defaultLayout: 'main'}));
