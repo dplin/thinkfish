@@ -2,22 +2,26 @@
     'use strict';
 
     angular.module('core.services', [])
-    .service('pageService', ['$http', function($http) {
-        // Initialize empty object
-        this.pagedata = {};
-
-        this.loadPageData = function(page_name) {
-            var that = this;
-            $http.get('/wp-json/pages/' + page_name).then(
-                function(response) {
-                      angular.copy(response.data, that.pagedata);
-                },
-                function(error) {
-
+        .service('worksService', ['$resource', function($resource) {
+            return $resource('/api/works/:id', { id: '@_id'}, {
+                update: {
+                    method: 'PUT' // this is to support UPDATE operation.
                 }
-            );
-        };
-
-    }]);
+            });
+        }])
+        .service('aboutService', ['$resource', function($resource) {
+            return $resource('/api/about/:id', { id: '@_id'}, {
+                update: {
+                    method: 'PUT' // this is to support UPDATE operation.
+                }
+            });
+        }])
+        .service('contactService', ['$resource', function($resource) {
+            return $resource('/api/contact/:id', { id: '@_id'}, {
+                update: {
+                    method: 'PUT' // this is to support UPDATE operation.
+                }
+            });
+        }]);
 
 }());

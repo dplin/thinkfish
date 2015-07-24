@@ -7,7 +7,6 @@
                "ngResource",
                "core.home",
                "core.filters",
-               "core.directives",
                "core.services"
             ])
             .controller('AppController', ['$rootScope', '$router', AppController])

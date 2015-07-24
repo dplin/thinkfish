@@ -1,20 +1,3 @@
-/*            var mediaElement;
-var playing = false;
-MediaElement('nyan', {
-    pluginPath: '/js/mediaelement/',
-    success: function(me) {
-        mediaElement = me;
-        me.play();
-        me.addEventListener('timeupdate', function(time) {
-            if (me.currentTime > 3.7)
-                playing = true;
-        });
-    }
-});*/
-
-/* Preloader */
-/* Note: Another alternative is html5loader by Gianluca Guarini: https://github.com/GianlucaGuarini/jquery.html5loader */
-
 (function(){
     'use strict';
 
@@ -43,6 +26,7 @@ MediaElement('nyan', {
 
 
     /************************************************************************* Preloader *************************************************************************/
+    /* Note: Another alternative is html5loader by Gianluca Guarini: https://github.com/GianlucaGuarini/jquery.html5loader */
     var startVal = 0;
     var total_imgs = $('img').length;
 
