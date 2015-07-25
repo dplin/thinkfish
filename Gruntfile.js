@@ -1,4 +1,6 @@
 module.exports = function(grunt){
+    'use strict';
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         jshint: {
@@ -7,21 +9,25 @@ module.exports = function(grunt){
             },
             init: [
                 './Gruntfile.js',
-                './public/components/**/*.js',
-                './public/js/**/*.js'
+                './public/components/**/*.js'
             ],
         },
         concat: {
             lib:{
                 src: [
-                    'public/js/angular.js',
-                    'public/js/router.es5.js',
-                    'public/js/angular-animate.js',
-                    'public/js/angular-resource.js',
-                    'public/js/animation.gsap.js',
-                    'public/js/main.js',
-                    'public/js/particles.js',
-                    'public/js/scroll.js',
+                    'public/js/vendor/modernizr.js',
+                    'public/js/vendor/fastclick.js',
+                    'public/js/vendor/jquery-1.11.3.min.js',
+                    'public/js/vendor/angular.js',
+                    'public/js/vendor/angular-animate.js',
+                    'public/js/vendor/angular-resource.js',
+                    'public/js/vendor/router.es5.js',
+                    'public/js/vendor/TweenMax.min.js',
+                    'public/js/vendor/ScrollToPlugin.min.js',
+                    'public/js/vendor/ScrollMagic.min.js',
+                    'public/js/vendor/animation.gsap.js',
+                    'public/js/vendor/jquery.waitforimages.min.js',
+                    'public/js/vendor/main.js',
                     'public/core.js',
                     'public/components/**/*.js',
                     'public/services/*.js',
@@ -82,12 +88,11 @@ module.exports = function(grunt){
                 options: { livereload: true },
                 files: ['public/scss/**/*.{scss,sass}'],
                 tasks: ['compass']
+            },
+            js:{
+               files: ['public/components/**/*.js', 'public/js/**/*.js'],
+               tasks: ['jshint']
             }
-//            ,
-//            js:{
-//                files: ['public/**/*.js', 'public/*.js'],
-//                tasks: ['concat:js', 'uglify:js']
-//            }
         }
     });
 
