@@ -16,7 +16,7 @@ var app = express();
 mongoose.connect('mongodb://thinkfish:thinkfish@ds049848.mongolab.com:49848/thinkfish');
 
 // Needed for Nodemon
-var port = Number(process.env.PORT || 3000);
+var port = Number(process.env.PORT || 4000);
 app.listen(port);
 
 // view engine setup
@@ -41,7 +41,7 @@ app.use(function(req, res, next) {
   err.status = 404;
 
   // Intercept 404 and redirect it to home page.
-  res.writeHead(301, {Location: 'http://localhost:3000/'});
+  res.writeHead(301, {Location: 'http://localhost:4000/'});
   res.end();
 
   //next(err);

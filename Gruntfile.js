@@ -8,11 +8,13 @@ module.exports = function(grunt){
                     'public/js/router.es5.js',
                     'public/js/angular-animate.js',
                     'public/js/animation.gsap.js',
-                    'public/js/main.js'
+                    'public/js/main.js',
+                    'public/js/particles.js',
+                    'public/js/scroll.js'
                 ],
                 dest: 'build/lib.js',
             },
-            js:{
+            app:{
                 src: [
                     'public/core.js',
                     'public/components/**/*.js',
@@ -36,19 +38,19 @@ module.exports = function(grunt){
             },
             lib:{
                 files: {
-                    'public/js/lib.min.js': ['build/lib.js']
+                    'public/dist/lib.min.js': ['build/lib.js']
                 }
             },
-            js:{
+            app:{
                 files: {
-                    'public/js/app.min.js': ['build/app.js']
+                    'public/dist/app.min.js': ['build/app.js']
                 }
             }
         },
         cssmin: {
             css:{
                 files: [{
-                    dest: 'public/css/styles.min.css',
+                    dest: 'public/dist/styles.min.css',
                     src: ['build/styles.css']
                 }]
             }
