@@ -35,5 +35,3 @@
         .controller('HomeController', ['$rootScope', 'servicesService', 'worksService', 'aboutService', 'contactService', HomeController]);
 
 }());
-
-

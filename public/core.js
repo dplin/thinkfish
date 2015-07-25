@@ -1,35 +1,18 @@
 (function(){
     'use strict';
 
-            angular.module("core", [
-               "ngNewRouter",
-               "ngAnimate",
-               "ngResource",
-               "core.home",
-               "core.filters",
-               "core.services"
-            ])
-            .controller('AppController', ['$rootScope', '$router', AppController])
-            .config(['$componentLoaderProvider', componentLoaderConfig]);
-
             function AppController($rootScope, $router){
                 var vm = this;
 
                 $router.config([
-                    {path:"/", redirectTo: "home"},
-                    {path:"/home", component: "home", as: "home"}
+                    {path:'/', redirectTo: 'home'},
+                    {path:'/home', component: 'home', as: 'home'}
                 ]);
 
                 $rootScope.site_name = 'Think Different';
 
                 // Inject 'active' class into navigation menu
                 vm.isActive = function(viewlocation){
-/*                    viewlocation = viewlocation.replace('#/', '')
-
-                    if (/#\/$/.test(window.location.href) == true && viewlocation == ''){
-                        return true;
-                    }*/
-
                     return window.location.href.indexOf(viewlocation) > 0 ? true : false;
                 };
             }
@@ -50,6 +33,16 @@
                 });
             }
 
+            angular.module('core', [
+               'ngNewRouter',
+               'ngAnimate',
+               'ngResource',
+               'core.home',
+               'core.filters',
+               'core.services'
+            ])
+            .controller('AppController', ['$rootScope', '$router', AppController])
+            .config(['$componentLoaderProvider', componentLoaderConfig]);
 }());
 
 

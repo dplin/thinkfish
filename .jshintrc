@@ -1,4 +1,5 @@
 {
+	"funcscope": true,
 	"node": true, // Enable globals available when code is running inside of the NodeJS runtime environment.
 	"browser": true, // Standard browser globals e.g. `window`, `document`.
 	"esnext": true, // Allow ES.next specific features such as `const` and `let`.
@@ -18,6 +19,44 @@
 	"trailing": true, // Prohibit trailing whitespaces.
 	"smarttabs": false, // Suppresses warnings about mixed tabs and spaces
 	"globals": { // Globals variables.
+	        //GSAP Globals
+	        "TimelineLite" : false,
+	        "TimelineMax" : false,
+	        "TweenLite" : false,
+	        "TweenMax" : false,
+	        "Back" : false,
+	        "Bounce" : false,
+	        "Circ" : false,
+	        "Cubic" : false,
+	        "Ease" : false,
+	        "EaseLookup" : false,
+	        "Elastic" : false,
+	        "Expo" : false,
+	        "Linear" : false,
+	        "Power0" : false,
+	        "Power1" : false,
+	        "Power2" : false,
+	        "Power3" : false,
+	        "Power3" : false,
+	        "Power4" : false,
+	        "Quad" : false,
+	        "Quart" : false,
+	        "Quint" : false,
+	        "RoughEase" : false,
+	        "Sine" : false,
+	        "SlowMo" : false,
+	        "SteppedEase" : false,
+	        "Strong" : false,
+	        "Draggable" : false,
+	        "SplitText" : false,
+	        "VelocityTracker" : false,
+	        "CSSPlugin" : false,
+	        "ThrowPropsPlugin" : false,
+	        "BezierPlugin" : false,
+		"$": false,
+		"jQuery": false,
+		"ScrollMagic" : false,
+		"canvas" : false,
 		"jasmine": true,
 		"angular": true,
 		"ApplicationConfiguration": true

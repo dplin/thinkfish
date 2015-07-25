@@ -9,7 +9,9 @@ module.exports = function(grunt){
             },
             init: [
                 './Gruntfile.js',
-                './public/components/**/*.js'
+                './public/components/**/*.js',
+                './public/js/*.js',
+                './public/*.js'
             ],
         },
         concat: {
@@ -90,8 +92,13 @@ module.exports = function(grunt){
                 tasks: ['compass']
             },
             js:{
-               files: ['public/components/**/*.js', 'public/js/**/*.js'],
-               tasks: ['jshint']
+                files: [
+                    './Gruntfile.js',
+                    './public/components/**/*.js',
+                    './public/js/*.js',
+                    './public/*.js'
+                ],
+                tasks: ['jshint']
             }
         }
     });
