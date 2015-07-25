@@ -2,6 +2,13 @@
     'use strict';
 
     angular.module('core.services', [])
+        .service('servicesService', ['$resource', function($resource) {
+            return $resource('/api/services/:id', { id: '@_id'}, {
+                update: {
+                    method: 'PUT' // this is to support UPDATE operation.
+                }
+            });
+        }])
         .service('worksService', ['$resource', function($resource) {
             return $resource('/api/works/:id', { id: '@_id'}, {
                 update: {

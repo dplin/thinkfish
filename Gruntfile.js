@@ -1,6 +1,16 @@
 module.exports = function(grunt){
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        jshint: {
+            options: {
+                jshintrc: '.jshintrc', // Defined options and globals.
+            },
+            init: [
+                './Gruntfile.js',
+                './public/components/**/*.js',
+                './public/js/**/*.js'
+            ],
+        },
         concat: {
             lib:{
                 src: [
@@ -11,20 +21,21 @@ module.exports = function(grunt){
                     'public/js/animation.gsap.js',
                     'public/js/main.js',
                     'public/js/particles.js',
-                    'public/js/scroll.js'
-                ],
-                dest: 'build/lib.js',
-            },
-            app:{
-                src: [
+                    'public/js/scroll.js',
                     'public/core.js',
                     'public/components/**/*.js',
                     'public/services/*.js',
                     'public/filters/*.js',
                     'public/directives/*.js'
                 ],
-                dest: 'build/app.js',
+                dest: 'build/lib.js',
             },
+/*            app:{
+                src: [
+
+                ],
+                dest: 'build/app.js',
+            },*/
             css:{
                 src: [
                     'public/css/*.css'
@@ -37,19 +48,19 @@ module.exports = function(grunt){
                 // the banner is inserted at the top of the output
                 banner: '/*! Author: Derek Lin; <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
             },
-            lib:{
+            prod:{
                 files: {
                     'public/dist/lib.min.js': ['build/lib.js']
                 }
-            },
-            app:{
+            }
+/*            app:{
                 files: {
                     'public/dist/app.min.js': ['build/app.js']
                 }
-            }
+            }*/
         },
         cssmin: {
-            css:{
+            prod:{
                 files: [{
                     dest: 'public/dist/styles.min.css',
                     src: ['build/styles.css']
@@ -80,14 +91,19 @@ module.exports = function(grunt){
         }
     });
 
+    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    // Build all files.  Concat .js & .css -> minify js -> minify css
-    grunt.registerTask('production', ['concat', 'uglify', 'cssmin']);
     // Default
-    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('default', ['watch', 'jshint']);
+
+    // Development
+    grunt.registerTask('dev', ['uglify', 'cssmin']);
+
+    // Production
+    grunt.registerTask('prod', ['concat', 'uglify:prod', 'cssmin:prod']);
 };

@@ -20,5 +20,8 @@
     "mongoose": "^4.0.7",
     "morgan": "~1.5.3",
     "serve-favicon": "~2.2.1"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.11.2"
   }
 }

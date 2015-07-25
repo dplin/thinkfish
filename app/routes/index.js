@@ -9,6 +9,9 @@ router.get('/', core.index);
 * REST API
 **/
 
+// GET - List services
+router.get('/api/services', core.listServices);
+
 // GET - List works
 router.get('/api/works', core.listWorks);
 

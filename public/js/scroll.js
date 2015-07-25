@@ -221,8 +221,6 @@
     .setTween(tw_services)
     .addTo(controller);
 
-
-
     // Work
     var top_left = '.tpl';
     var top_right = '.tpr';
@@ -270,7 +268,7 @@
                     // No reverse animation. In this case, no slide in and fade out when scrolling up.
                     sc_work.reverse(false);
                 }
-            }), '+=0.3');
+            }), '+=0.15');
 
         // Set scene
         var sc_work = new ScrollMagic.Scene({

@@ -1,20 +1,23 @@
 (function(){
     'use strict';
 
-    function HomeController($rootScope, worksService, aboutService, contactService) {
+    function HomeController($rootScope, servicesService, worksService, aboutService, contactService) {
         var vm = this;
         $rootScope.page = 'pageHome';
         $rootScope.title = $rootScope.site_name + '';
 
         // Component Lifecycle Hooks
         // Note: This is where you load everything before component is rendered into viewport.
-        vm.activate = ['worksService', 'aboutService', 'contactService', function(worksService, aboutService, contactService){
+        vm.activate = ['servicesService', 'worksService', 'aboutService', 'contactService', function(servicesService, worksService, aboutService, contactService){
             // Initialize data store
-            vm._init(worksService, aboutService, contactService);
+            vm._init(servicesService, worksService, aboutService, contactService);
         }];
 
         // Private init() function
-        vm._init = function(worksService, aboutService, contactService){
+        vm._init = function(servicesService, worksService, aboutService, contactService){
+            servicesService.query(function (res){
+                vm.services = res;
+            });
             worksService.query(function (res){
                 vm.works = res;
             });
@@ -29,7 +32,7 @@
 
     angular
         .module('core.home', [])
-        .controller('HomeController', ['$rootScope', 'worksService', 'aboutService', 'contactService', HomeController]);
+        .controller('HomeController', ['$rootScope', 'servicesService', 'worksService', 'aboutService', 'contactService', HomeController]);
 
 }());
 
