@@ -125,7 +125,7 @@
     openingTimeline.set(sc_op1, {yPercent: -50, autoAlpha: 0});
     openingTimeline.set(sc_op2, {yPercent: 50, autoAlpha: 0});
     openingTimeline.set(sc_op3, {y: -50, autoAlpha: 0});
-    openingTimeline.set(sc_op4, {x: 50, autoAlpha: 0});
+    openingTimeline.set(sc_op4, {x: 100});
 
     function grandEntrance(){
         // Remove the preloader from DOM completely.
@@ -133,8 +133,8 @@
         // Set animation
         openingTimeline.to(sc_op1, 0.5, {yPercent: 0, autoAlpha: 1}, 'text')
             .to(sc_op2, 0.5, {yPercent: 0, autoAlpha: 1}, 'text')
-            .to(sc_op3, 0.3, {y:0, autoAlpha: 0.7})
-            .to(sc_op4, 0.3, {x:0, autoAlpha: 1});
+            .to(sc_op3, 0.3, {y:0, autoAlpha: 0.9})
+            .to(sc_op4, 0.3, {x:0});
     }
 
     /*************************************************************** Main Page Animation With ScrollMagic ****************************************************************/

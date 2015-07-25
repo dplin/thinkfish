@@ -26,10 +26,10 @@ module.exports = function(grunt){
                     'public/js/vendor/router.es5.js',
                     'public/js/vendor/TweenMax.min.js',
                     'public/js/vendor/ScrollToPlugin.min.js',
-                    'public/js/vendor/ScrollMagic.min.js',
+                    'public/js/vendor/ScrollMagic.js',
                     'public/js/vendor/animation.gsap.js',
                     'public/js/vendor/jquery.waitforimages.min.js',
-                    'public/js/vendor/main.js',
+                    'public/js/main.js',
                     'public/core.js',
                     'public/components/**/*.js',
                     'public/services/*.js',
@@ -91,7 +91,7 @@ module.exports = function(grunt){
                 files: ['public/scss/**/*.{scss,sass}'],
                 tasks: ['compass']
             },
-            js:{
+            jshint:{
                 files: [
                     './Gruntfile.js',
                     './public/components/**/*.js',
@@ -111,7 +111,7 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default
-    grunt.registerTask('default', ['watch', 'jshint']);
+    grunt.registerTask('default', ['watch']);
 
     // Development
     grunt.registerTask('dev', ['uglify', 'cssmin']);
