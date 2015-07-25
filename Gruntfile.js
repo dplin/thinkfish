@@ -7,6 +7,7 @@ module.exports = function(grunt){
                     'public/js/angular.js',
                     'public/js/router.es5.js',
                     'public/js/angular-animate.js',
+                    'public/js/angular-resource.js',
                     'public/js/animation.gsap.js',
                     'public/js/main.js',
                     'public/js/particles.js',
