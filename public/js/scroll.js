@@ -352,10 +352,14 @@
     $(window).on('resize', function () {
         if ($(window).width() <= 767 && controller.enabled()) {
             controller.enabled(false);
-            $('div, p, h1, figure, .fa-paper-plane-o').removeAttr('style');
+            $('div, p, h1, figure, .fa-paper-plane-o, .lnr-menu').removeAttr('style');
         }else if(!controller.enabled()){
-            console.log('jfjfj');
             controller.enabled(true);
+            $('.splash_bg').css({'top': 'auto', 'height': '100%'});
+            $('.effect-hera').css({'visibility': 'visible'});
+            $('.eh1, .eh2, .eh3, .eh4').each(function(key, value){
+                $(this).css('background-color', $(this).prev().css('background-color'));
+            });
         }
     });
 

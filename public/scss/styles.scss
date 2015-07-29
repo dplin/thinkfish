@@ -506,6 +506,9 @@ figcaption p a:focus::after {
     .preloader{
         display:none;
     }
+    .lnr-menu, nav+button p{
+        color:#999;
+    }
     section.splash{
         height: 30vh;
 
@@ -520,9 +523,6 @@ figcaption p a:focus::after {
     section.work{
         figure{
             visibility:visible;
-        }
-        .effect-hera{
-            //visibility:visible !important;
         }
         .eh1{
             background-color:#ffc3a0;
