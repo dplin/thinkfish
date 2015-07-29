@@ -502,3 +502,40 @@ figcaption p a:focus::after {
     transform: translateX(0px);
 }
 
+@media only screen and (max-width: 50em) {
+    .preloader{
+        display:none;
+    }
+    section.splash{
+        height: 30vh;
+
+        > *:not(.splash_bg){
+            display:none;
+        }
+        .splash_bg{
+            height:100%;
+            top:auto;
+        }
+    }
+    section.work{
+        figure{
+            visibility:visible;
+        }
+        .effect-hera{
+            //visibility:visible !important;
+        }
+        .eh1{
+            background-color:#ffc3a0;
+        }
+        .eh2{
+            background-color:#333333;
+        }
+        .eh3{
+            background-color:#a366a3;
+        }
+        .eh4{
+            background-color:#ff7373;
+        }
+    }
+
+}

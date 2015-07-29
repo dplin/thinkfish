@@ -343,6 +343,23 @@
     .addTo(controller);
 
 
+    /************* Responsive **************/
+    // initialize skrollr if the window width is large enough
+/*    if ($(window).width() <= 767 && controller.enabled()) {
+        controller.enabled(false);
+    }*/
+    // disable skrollr if the window is resized below 768px wide
+    $(window).on('resize', function () {
+        if ($(window).width() <= 767 && controller.enabled()) {
+            controller.enabled(false);
+            $('div, p, h1, figure, .fa-paper-plane-o').removeAttr('style');
+        }else if(!controller.enabled()){
+            console.log('jfjfj');
+            controller.enabled(true);
+        }
+    });
+
+
     /************* Helper Function ***********/
 
     // Scrolling that utilize GSAP's scrollTo plugin

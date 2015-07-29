@@ -31,12 +31,12 @@
             <div class="small-4 columns text-center">
                 <span class="lnr lnr-rocket"></span><br>
                 <h4>{{ home.services[1]['title'] }}</h4>
-                <p>{{ home.services[0]['description'] }}</p>
+                <p>{{ home.services[1]['description'] }}</p>
             </div>
             <div class="small-4 columns text-center">
                 <span class="lnr lnr-coffee-cup"></span><br>
                 <h4>{{ home.services[2]['title'] }}</h4>
-                <p>{{ home.services[0]['description'] }}</p>
+                <p>{{ home.services[2]['description'] }}</p>
             </div>
         </div>
     </section>
@@ -51,9 +51,9 @@
             </div>
         </div>
         <div class="row fullWidth">
-            <div class="small-6 columns">
+            <div class="small-12 medium-12 large-6 columns">
                 <div class="tpl"></div>
-                <figure class="effect-hera">
+                <figure class="effect-hera eh1">
                     <img src="{{ home.works[0]['image_url'] }}" alt="">
                     <figcaption>
                         <p>
@@ -62,9 +62,9 @@
                     </figcaption>
                 </figure>
             </div>
-            <div class="small-6 columns">
+            <div class="small-12 medium-12 large-6 columns">
                 <div class="tpr"></div>
-                <figure class="effect-hera">
+                <figure class="effect-hera eh2">
                     <img src="{{ home.works[1]['image_url'] }}" alt="">
                     <figcaption>
                         <p>
@@ -76,9 +76,9 @@
         </div>
 
         <div class="row fullWidth">
-            <div class="small-6 columns">
+            <div class="small-12 medium-12 large-6 columns">
                 <div class="btl"></div>
-                <figure class="effect-hera">
+                <figure class="effect-hera eh3">
                     <img src="{{ home.works[2]['image_url'] }}" alt="">
                     <figcaption>
                         <p>
@@ -87,9 +87,9 @@
                     </figcaption>
                 </figure>
             </div>
-            <div class="small-6 columns">
+            <div class="small-12 medium-12 large-6 columns">
                 <div class="btr"></div>
-                <figure class="effect-hera">
+                <figure class="effect-hera eh4">
                     <img src="{{ home.works[3]['image_url'] }}" alt="">
                     <figcaption>
                         <p>
@@ -132,11 +132,14 @@
 </main>
 
 <script>
-    // Load Scrolling Code
-    $.getScript('./js/scroll.js');
+    // Responsive
+    if ($(window).width() > 767) {
+        // Load Scrolling Code
+        $.getScript('./js/scroll.js');
 
-    // Load Particle Animation Script
-    $.getScript('./js/particles.js');
+        // Load Particle Animation Script
+        $.getScript('./js/particles.js');
+    }
 </script>
 
 
