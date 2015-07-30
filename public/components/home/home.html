@@ -146,18 +146,14 @@
             $(this).toggleClass('active');
             $('span', this).toggleClass(function(){
                 if ($(this).hasClass('lnr-menu')){
-                    // Disable ScrollMagic Scene when Navigation Menu is open
                     $(this).removeClass('lnr-menu');
                     return 'lnr-cross';
                 }else{
-                    // Enable ScrollMagic Scene when Navigation Menu is closed
                     $(this).removeClass('lnr-cross');
                     return 'lnr-menu';
                 }
             });
         });
-
-
     }
 </script>
 
